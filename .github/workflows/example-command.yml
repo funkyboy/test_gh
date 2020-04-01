@@ -1,7 +1,7 @@
 name: example-command
 on:
-repository_dispatch:
-  types: [example-command]
+  repository_dispatch:
+    types: [example-command]
 
 jobs:
   example:
