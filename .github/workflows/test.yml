@@ -10,10 +10,8 @@ jobs:
         with:
           keyword: Trigger # This is the regex string to search in the comment
 
+      - name: Checkout
+        uses: actions/checkout@v1
       - name: Run when comvent matches
         run: ruby ./test.rb
-        # This checks whether comvent found a match
         if: steps.comvent.outputs.comvent != ''
-        # Comvent returns the following values
-        #   if found -> "found"
-        #   if not   -> ""
